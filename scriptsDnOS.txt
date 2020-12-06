@@ -1,2 +1,0 @@
-insert into dn_os(origem, id, empresa_id, xid, seguradora_sinistro, cli__pessoa__nome, cli__cpf, osstatus__inicio, interacao__inicio, item__descricao, servico_id,servico__xid)
-        values ('B2B','900116304', '1', '900116304', '1000035891', 'FABIO MACARIO DA SILVA,', '04991407451', '2019-10-05', '2019-10-05', '', 32, 'OUT');

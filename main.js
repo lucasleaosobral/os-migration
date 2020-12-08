@@ -2,7 +2,7 @@
 
 
 
-const csvFilePath= 'baseutf8-leao.csv'
+const csvFilePath= 'matador_do_callcenter_leao.csv'
 const fs = require('fs')
 const csv=require('csvtojson')
 csv({
@@ -18,7 +18,13 @@ csv({
         values ('B2B','${os.code}', '1', '${os.code}', '${os.claim}', '${os.name}', '${os.document}', '${os.issueDate}', '${os.issueDate}', '${os.model}', 32, 'OUT');`
    
         os.item = {'manufacturer': os.manufacturer, 'model': os.model};
-        os.complaint = os.complaint.trim();
+        
+        if(os.complaint.includes(":")) {
+            os.complaint = "";
+        } else {
+            os.complaint = os.complaint.trim();
+        }
+
         os.customer = {
             'name': os.name,
             'email': os.email,
